@@ -129,6 +129,41 @@
           }
         }
       }
+    },
+    "fdforms": {
+      "root": "projects/fdforms",
+      "sourceRoot": "projects/fdforms/src",
+      "projectType": "library",
+      "prefix": "fd",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/fdforms/tsconfig.lib.json",
+            "project": "projects/fdforms/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fdforms/src/test.ts",
+            "tsConfig": "projects/fdforms/tsconfig.spec.json",
+            "karmaConfig": "projects/fdforms/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fdforms/tsconfig.lib.json",
+              "projects/fdforms/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "dynamic-form-demo"

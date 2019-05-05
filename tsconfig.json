@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "fdforms": [
+        "dist/fdforms"
+      ],
+      "fdforms/*": [
+        "dist/fdforms/*"
+      ]
+    }
   }
 }
